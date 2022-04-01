@@ -29,7 +29,7 @@
 //!
 use ootp::hotp::{Hotp, MakeOption};
 
-pub use clap::{ArgEnum, ArgGroup, Command, CommandFactory, ErrorKind, Parser, Subcommand};
+use clap::{CommandFactory, ErrorKind, Parser};
 
 /// Simple program to calculate pointsharp HOTP codes
 #[derive(Parser, Debug)]
