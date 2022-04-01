@@ -1,6 +1,8 @@
 [package]
 name = "pointsharp"
+authors = ["Henrik Tjäder <henrik@tjaders.com>"]
 version = "1.0.0"
+description = "Calculate HOTP values with seed and initial counter specific to PointSharp"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
