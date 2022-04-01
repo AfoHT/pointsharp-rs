@@ -8,7 +8,7 @@
 //! ```
 //! and use the resulting OTP value for logging in.
 //!
-//! Run with --help for a full list of options
+//! Run with `--help` for a full list of options.
 //!
 //! The base32 encoded HOTP SECRET from `--oathmode` can be used by not only `oathtool`,
 //! but all standard HOTP capable tools such as Aegis, Google Authenticator, Microsoft Authenticator etc.
@@ -18,11 +18,14 @@
 //! functionality.
 //!
 //! Example HOTP:
-//! `activation_code` = "539787";
-//! Count = 1, OTP = 750 277
-//! Count = 2, OTP = 962 814
-//! Count = 3, OTP = 331 876
-//! Count = 4, OTP = 950 412
+//!
+//! ```text
+//! activation_code = "539787";
+//! Count = 0, OTP = 750 277
+//! Count = 1, OTP = 962 814
+//! Count = 2, OTP = 331 876
+//! Count = 3, OTP = 950 412
+//! ```
 //!
 use ootp::hotp::{Hotp, MakeOption};
 
@@ -33,7 +36,7 @@ pub use clap::{ArgEnum, ArgGroup, Command, CommandFactory, ErrorKind, Parser, Su
 #[clap(author, version, about, long_about = None)]
 pub struct Cli {
     /// If set activate oathtool mode,
-    /// useful with command substitution oathtool $(pointsharp -o 123456)
+    /// useful with command substitution: oathtool $(pointsharp -o 123456)
     #[clap(short, long)]
     pub oathmode: bool,
 
