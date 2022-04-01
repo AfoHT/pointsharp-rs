@@ -102,6 +102,7 @@ fn main() {
     }
 }
 
+/// Replace part of the seed with activation_code as `char`
 fn seed_add_activation_code(seed: &mut [u8], activation_code: &str) {
     // Copy the provided characters into the seed,
     // overwriting existing bytes
@@ -110,6 +111,7 @@ fn seed_add_activation_code(seed: &mut [u8], activation_code: &str) {
     }
 }
 
+/// Base32 encode
 fn base32_encode(secret: &[u8]) -> String {
     base32::encode(base32::Alphabet::RFC4648 { padding: false }, secret)
 }
